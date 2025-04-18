@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Rubén Villalonga | Compositor VFX</title>
+  <title>Rubén Villalonga | VFX Compositor</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
   <style>
     body {
@@ -19,13 +19,32 @@
       background: #1a1a1a;
     }
     h1 {
-      margin: 0;
       font-size: 2.5rem;
+      margin: 0;
+      background: linear-gradient(
+        120deg,
+        #ff4c60,
+        #ffffff,
+        #ff0000,
+        #ff4c60
+      );
+      background-size: 300% auto;
+      background-clip: text;
+      -webkit-background-clip: text;
+      color: transparent;
+      -webkit-text-fill-color: transparent;
+      animation: shimmer 4s ease-in-out infinite;
     }
-    p {
-      margin: 0.5rem 0 1.5rem;
-      font-size: 1.1rem;
-      color: #ccc;
+    @keyframes shimmer {
+      0% {
+        background-position: 0% 50%;
+      }
+      50% {
+        background-position: 100% 50%;
+      }
+      100% {
+        background-position: 0% 50%;
+      }
     }
     section {
       padding: 2rem;
@@ -50,6 +69,11 @@
     .image img {
       max-width: 100%;
       border-radius: 0.5rem;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .image:hover img {
+      transform: scale(1.03);
+      box-shadow: 0 0 20px rgba(255, 76, 96, 0.3);
     }
     footer {
       text-align: center;
@@ -67,48 +91,74 @@
       text-decoration: none;
       font-weight: bold;
     }
-  </style>
+  
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 2rem;
+      }
+      .grid {
+        grid-template-columns: 1fr;
+      }
+      section {
+        padding: 1.5rem 1rem;
+      }
+      .image img {
+        border-radius: 0.4rem;
+      }
+      a.button {
+        width: 100%;
+        text-align: center;
+      }
+    }
+
+</style>
 </head>
 <body>
   <header>
     <h1>Rubén Villalonga</h1>
-    <p>Compositor Digital de VFX | Nuke · Mocha · Silhouette</p>
+    <p>VFX Compositor | Nuke</p>
   </header>
 
   <section>
-    <h2>Sobre mí</h2>
-    <p>Soy compositor digital con experiencia en producciones para Apple TV, Netflix y Peacock. Actualmente trabajo en Lamppost VFX, y he pasado por estudios como Hypnotic VFX. Me especializo en integración de elementos CG, cleanup, keying, y composición multipass en Nuke.</p>
-  </section>
-
-  <section>
-    <h2>Portfolio</h2>
-    <p>Por temas de confidencialidad, mi reel no está disponible públicamente. Si deseas verla, contáctame y con gusto te compartiré un enlace privado.</p>
-    <a href="mailto:tuemail@ejemplo.com" class="button">Solicitar Reel Privada</a>
-  </section>
-
-  <section>
-    <h2>Trabajos Destacados</h2>
-    <div class="grid">
-      <div class="image">
-        <img src="frame1.jpg" alt="Frame de producción" />
-        <p>Integración de personaje CG - Apple TV</p>
-      </div>
-      <div class="image">
-        <img src="frame2.jpg" alt="Frame de producción" />
-        <p>Composición multipass - Netflix</p>
-      </div>
+    <h2>About Me</h2>
+    <div>
+      <p>Hi, I’m Rubén Villalonga. I tell stories frame by frame from the other side of the screen. With over 3 years of experience as a digital compositor, I’ve worked on productions for Apple TV, Netflix, and Peacock. Currently, I’m part of the team at Lamppost VFX, where I bring complex shots to life using Nuke as my main tool.</p>
+      <p>My specialty: seamlessly integrating visual effects, cleaning up shots, and blending the real with the digital—so nothing pulls you out of the story. My goal is to make every shot breathe truth, enhancing the narrative and evoking emotion without revealing the magic behind it.</p>
+    </div>
+    <div style="text-align: center; margin-top: 1.5rem;">
+      <img src="profile_image_framed.png" alt="Rubén Villalonga portrait" style="width: 200px; border: 1px solid #444; border-radius: 10px;">
     </div>
   </section>
 
   <section>
-    <h2>Contacto</h2>
-    <p>¿Tienes un proyecto o colaboración en mente? Estoy abierto a propuestas freelance.</p>
-    <p>Email: <a href="mailto:tuemail@ejemplo.com">tuemail@ejemplo.com</a></p>
-    <p>LinkedIn: <a href="https://linkedin.com/in/tuusuario" target="_blank">linkedin.com/in/tuusuario</a></p>
+    <h2>Portfolio</h2>
+    <p>Due to confidentiality agreements, my reel is not publicly available. If you'd like to view it, feel free to reach out and I’ll gladly share a private link.</p>
+    <a href="mailto:rubenvillalongalozano@gmail.com" class="button">Request Private Reel</a>
+  </section>
+
+  <section>
+    <h2>Featured Work</h2>
+    <div class="grid">
+      <div class="image"><img src="caida-libre-cartel.jpg" alt="Caída Libre" /><p><strong>Caída Libre</strong> - Dir. Laura Jou | Prod. J.A. Bayona</p></div>
+      <div class="image"><img src="Carteles-con-logos.png" alt="A Whale" /><p><strong>A Whale</strong> - Dir. Pablo Hernando</p></div>
+      <div class="image"><img src="es-ES_lunet.jpg" alt="Last Night in Tremor" /><p><strong>Last Night in Tremor</strong> - Mini-series | Netflix</p></div>
+      <div class="image"><img src="La_sociedad_de_la_nieve.jpg" alt="Society of the Snow" /><p><strong>Society of the Snow</strong> - Dir. J.A. Bayona | Netflix</p></div>
+      <div class="image"><img src="Un_futuro_desafiante.jpg" alt="Extrapolations" /><p><strong>Extrapolations</strong> - Apple TV+</p></div>
+      <div class="image"><img src="aixo-no-es-suecia.jpg" alt="Això no és Suècia" /><p><strong>Això no és Suècia</strong> - Series | Nanouk Films</p></div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Contact</h2>
+    <p>Have a project or collaboration in mind? I’m open to freelance opportunities.</p>
+    <p>📞 Phone: <a href="tel:+34661101830">+34 661 101 830</a></p>
+    <p>📧 Email: <a href="mailto:rubenvillalongalozano@gmail.com">rubenvillalongalozano@gmail.com</a></p>
+    <p>🔗 LinkedIn: <a href="https://linkedin.com/in/ruben-villalonga" target="_blank">linkedin.com/in/ruben-villalonga</a></p>
+    <p>🎬 IMDb: <a href="https://www.imdb.com/name/nm15569362" target="_blank">imdb.com/name/nm15569362</a></p>
   </section>
 
   <footer>
-    &copy; 2025 Rubén Villalonga. Todos los derechos reservados.
+    &copy; 2025 Rubén Villalonga. All rights reserved.
   </footer>
 </body>
 </html>
